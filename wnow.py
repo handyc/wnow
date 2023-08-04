@@ -9,7 +9,7 @@ import sys
 import os
 
 from zoneinfo import ZoneInfo
-from pytz import reference
+#from pytz import reference
 
 # zonelist is a user editable list of time zones to display
 # comment / uncomment
@@ -82,15 +82,16 @@ def schermo(scr, *args):
   #curses.use_default_colors()
 
   curses.use_default_colors()
-  for i in range(1, curses.COLORS):
+  #for i in range(1, curses.COLORS):
+  for i in range(1, curses.COLORPAIRS):
       curses.init_pair(i, i, -1);
 
-  curses.init_pair(1, curses.COLOR_YELLOW, -1)
-  curses.init_pair(2, curses.COLOR_CYAN, -1)
-  curses.init_pair(3, curses.COLOR_GREEN, -1)
+  curses.init_pair(1, curses.COLOR_GREEN, -1)
+  curses.init_pair(2, curses.COLOR_YELLOW, -1)
+  curses.init_pair(3, curses.COLOR_CYAN, -1)
 
   curses.init_pair(4, curses.COLOR_BLUE, -1)
-  curses.init_pair(5, curses.COLOR_YELLOW, -1)
+  curses.init_pair(5, curses.COLOR_RED, -1)
   #curses.init_pair(6, curses.COLOR_RED, -1)
   #curses.init_pair(7, curses.COLOR_RED, -1)
 
@@ -100,7 +101,7 @@ def schermo(scr, *args):
   while ch != ord('q'):
    for x in range(0,(len(zone))):
       os.environ["TZ"] = zone[x][0]
-      localtime = reference.LocalTimezone()
+      #localtime = reference.LocalTimezone()
  
       if x in clocklight.values():
          #vx = clocklight.values().index(x)
