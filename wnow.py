@@ -105,11 +105,11 @@ def schermo(scr, *args):
  
       if x in clocklight.values():
          #vx = clocklight.values().index(x)
-         vx = [ k for k, v in clocklight.items() if v == x ][0] + 5
+         vx = [ k for k, v in clocklight.items() if v == x ][0] + 2
          stdscr.addstr(x, 0, f'{str(zone[x][1]): <15} {datetime.datetime.now(tz=ZoneInfo(zone[x][0])).strftime("%a %d %b %Y %H:%M:%S %Z"): <30} {datetime.datetime.now(tz=ZoneInfo(zone[x][0])).strftime(" (UTC%z)"): >0}',  curses.color_pair(vx))
          #stdscr.addstr(x, 60, f'{"<----abcdefgh---"}', curses.color_pair(5))
       else:
-         stdscr.addstr(x, 0, f'{str(zone[x][1]): <15} {datetime.datetime.now(tz=ZoneInfo(zone[x][0])).strftime("%a %d %b %Y %H:%M:%S %Z"): <30} {datetime.datetime.now(tz=ZoneInfo(zone[x][0])).strftime(" (UTC%z)"): >0}',  curses.color_pair(3))
+         stdscr.addstr(x, 0, f'{str(zone[x][1]): <15} {datetime.datetime.now(tz=ZoneInfo(zone[x][0])).strftime("%a %d %b %Y %H:%M:%S %Z"): <30} {datetime.datetime.now(tz=ZoneInfo(zone[x][0])).strftime(" (UTC%z)"): >0}',  curses.color_pair(1))
          #stdscr.addstr(x, 60, f'{"_._#_#_|_o_&_|_#"}', curses.color_pair(4))
 
    #stdscr.addstr(x, 60, f'{"_._#_#_|_o_&_|_#"}', curses.color_pair(4))
