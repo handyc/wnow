@@ -82,8 +82,8 @@ def schermo(scr, *args):
   #curses.use_default_colors()
 
   curses.use_default_colors()
-  #for i in range(1, curses.COLORS):
-  for i in range(1, curses.COLOR_PAIRS):
+  for i in range(1, curses.COLORS):
+  #for i in range(1, curses.COLOR_PAIRS):
       curses.init_pair(i, i, -1);
 
   curses.init_pair(1, curses.COLOR_GREEN, -1)
