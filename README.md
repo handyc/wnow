@@ -1,6 +1,8 @@
 # wnow
 wnow simple Python command line moving digital world clock
 
+![wnow](images/screenshot.jpg)
+
 works on Windows, Linux, BSD and macOS
 
 you may need to make some small changes depending on your system:
